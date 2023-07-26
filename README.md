@@ -1,8 +1,6 @@
 # AirSpear
 **Introducing Air Spear: The Ultimate Cybersecurity Tool**
 
-**Air Spear**
-
 Greetings, CyberSecurity Professionals!
 
 Today, we are excited to introduce you to "Air Spear," a powerful and cutting-edge tool designed to elevate your cybersecurity game to new heights. Developed by Mahmoud Ahmed, also known as "Glitch," Air Spear aims to provide a seamless and effective solution for conducting reverse DNS lookups and domain mapping, all in one place.
