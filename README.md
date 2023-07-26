@@ -1,7 +1,7 @@
 # AirSpear
 **Introducing Air Spear: The Ultimate Cybersecurity Tool**
 
-[Air Spear]
+**Air Spear**
 
 Greetings, CyberSecurity Professionals!
 
