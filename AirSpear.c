@@ -159,9 +159,9 @@ void Setup(void) {
         Glitch();
         printf("\n==============================================");
         printf("\nStep 1 completed successfully.\n");
-        printf("Move on to Step 2.\n");
+        printf("Continue with Step 2.\n");
         printf("==============================================\n");
-        end();
+        main();
     }
     else if(Step == 2){
         Glitch();
@@ -171,9 +171,13 @@ void Setup(void) {
         char *way = get_string("\nWay: ");
         if (way != NULL && way[0] == '1'){
             system("sudo apt-get install linux-headers-`uname -r`");
+            printf("\nIF YOU GET AN ERROR JUST TRY THE OTHER WAY!\n");
+            sleep(5);
+            main();
         }
         else if (way != NULL && way[0] == '2'){
             system("sudo apt-get install linux-headers-5.10.0-kali6-amd64");
+            main();
         }else{
             end();
         }
@@ -190,7 +194,7 @@ void Setup(void) {
         }
         printf("\n\n==============================================\n");
         printf("Step 3 completed successfully.\n");
-        printf("Move on to Step 4 after reboot.\n");
+        printf("Continue with Step 4 after reboot.\n");
         printf("==============================================\n\n");
         sleep(5);
         system("reboot");
@@ -215,7 +219,7 @@ void Setup(void) {
         }
     }
         printf("\nGood bye!\n");
-        end();
+        main();
     }
     return;
 }
