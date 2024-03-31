@@ -1,3 +1,5 @@
 sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install libcs50
+git clone https://github.com/cs50/libcs50.git
+cd libcs50
+sudo make install
+cd ..

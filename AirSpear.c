@@ -124,14 +124,14 @@ void Setup(void) {
     int Step = get_int("\nStep: ");
 
     const char* const S1[] = {
-        "sudo apt update && sudo apt upgrade",
-        "sudo apt install bc",
-        "sudo apt-get install build-essential",
-        "sudo apt-get install libelf-dev",
+        "sudo apt update && sudo apt upgrade -y",
+        "sudo apt install bc -y",
+        "sudo apt-get install build-essential -y",
+        "sudo apt-get install libelf-dev -y",
     };
     
     const char* const S3[] = {
-        "sudo apt install dkms",
+        "sudo apt install dkms -y",
         "sudo rmmod r8188eu.ko",
         "git clone https://github.com/KanuX-14/rtl8188eus.git",
         "cd rtl8188eus && sudo sh -c 'echo \"blacklist r8188eu\" > /etc/modprobe.d/realtek.conf'",
@@ -171,12 +171,13 @@ void Setup(void) {
         char *way = get_string("\nWay: ");
         if (way != NULL && way[0] == '1'){
             system("sudo apt-get install linux-headers-`uname -r`");
-            printf("\nIF YOU GET AN ERROR JUST TRY THE OTHER WAY!\n");
+            printf("\nIF YOU GOT AN ERROR JUST TRY THE OTHER WAY!\n");
             sleep(5);
             main();
         }
         else if (way != NULL && way[0] == '2'){
             system("sudo apt-get install linux-headers-5.10.0-kali6-amd64");
+            sleep(5);
             main();
         }else{
             end();
@@ -208,16 +209,18 @@ void Setup(void) {
         }
         Glitch();
         string press_str = get_string("Enter 1 to enable monitor mode or any other potion to quit: ");
-    if (press_str != NULL) {
-        int press = atoi(press_str);
-        if (press == 1) {
-            Monitor_Mode();
-            printf("Monitor mode enabled.\n");
-        } else {
-            printf("Quiting..\n");
-            sleep(3);
+        
+        if (press_str != NULL) {
+            int press = atoi(press_str);
+            if (press == 1) {
+                Monitor_Mode();
+                printf("Monitor mode enabled.\n");
+            } else {
+                printf("Quiting..\n");
+                sleep(3);
+            }
         }
-    }
+        
         printf("\nGood bye!\n");
         main();
     }
